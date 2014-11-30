@@ -9,7 +9,7 @@ angular.module( 'ngBoilerplate.about', [
     url: '/about',
     views: {
       "main": {
-        controller: 'AboutCtrl',
+        controller: 'TableController',
         templateUrl: 'about/about.tpl.html'
       }
     },
@@ -17,13 +17,18 @@ angular.module( 'ngBoilerplate.about', [
   });
 })
 
-.controller( 'AboutCtrl', function AboutCtrl( $scope ) {
+.controller( 'TableController', function TableController( $scope ) {
   // This is simple a demo for UI Boostrap.
-  $scope.dropdownDemoItems = [
-    "The first choice!",
-    "And another choice for you.",
-    "but wait! A third!"
-  ];
-})
+ $scope.cells = contents();
 
-;
+  function contents(){
+    console.log("BING");
+    var num = [];
+    for (var i = 1; i < 26 ; i++) {
+    num.push(i);
+    }
+    console.log(num );
+    return num;
+  }
+});
+
