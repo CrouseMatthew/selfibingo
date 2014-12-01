@@ -1,8 +1,8 @@
 <h1>TITLE</h1>
 <div class="center">
 <div ng-controller="TableController">
-<!--     <a ng-click="openLightboxModal($index)"> -->
         <div ng-repeat="cell in cells">
+    <a ng-click="openLightboxModal($index)">
             <div class="square">
                 <div class="content">
                     <div class="table">
@@ -12,7 +12,7 @@
                     </div>
                 </div>
             </div>
+        </a>
         </div>
-<!--     </a> -->
 </div>
 </div>

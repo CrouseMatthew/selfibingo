@@ -30,5 +30,6 @@ angular.module( 'ngBoilerplate.about', [
     console.log(num );
     return num;
   }
+
 });
 
