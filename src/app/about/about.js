@@ -32,4 +32,3 @@ angular.module( 'ngBoilerplate.about', [
   }
 
 });
-
