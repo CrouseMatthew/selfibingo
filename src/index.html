@@ -17,15 +17,14 @@
     <meta property="og:description" content="Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- css for lightbox -->
-<link rel="stylesheet" href="../vendor/magnific-popup/dist/magnific-popup.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="../vendor/magnific-popup/dist/jquery.magnific-popup.js"></script> 
+    <!-- css for lightbox -->
+    <link rel="stylesheet" href="../vendor/magnific-popup/dist/magnific-popup.css">
     <!-- font awesome from BootstrapCDN -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
     <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+    <link href="assets/myCss.css" rel="stylesheet">
 
     <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
     <script type="text/javascript" src="<%= file %>"></script><% }); %>
@@ -51,11 +50,9 @@
             <span class="icon-bar"></span>
           </button>
           <div class="navbar-brand">
-            ngbp
+            NYE BUS
             <small>
-              <a href="http://github.com/ngbp/ngbp/blob/v<%= version %>-release/CHANGELOG.md">
-                v<%= version %>
-              </a>
+              V.2014
             </small>
           </div>
         </div>
@@ -63,32 +60,14 @@
           <ul class="nav navbar-nav">
             <li ui-sref-active="active">
               <a href ui-sref="home">
-                <i class="fa fa-home"></i>
+                <i class="fa fa-bus"></i>
                 Home
               </a>
             </li>
             <li ui-sref-active="active">
               <a href ui-sref="about">
-                <i class="fa fa-info-circle"></i>
-                What is it?
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/ngbp/ngbp#readme">
-                <i class="fa fa-book"></i>
-                Read the Docs
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/ngbp/ngbp">
-                <i class="fa fa-github-alt"></i>
-                Github
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/ngbp/ngbp/issues">
-                <i class="fa fa-comments"></i>
-                Support
+                <i class="fa fa-camera-retro"></i>
+                Bingo Board
               </a>
             </li>
           </ul>
@@ -110,19 +89,71 @@
 
 
           <p>
-            (c) 2013 <a href="http://www.joshdavidmiller.com">Josh David Miller</a>.
-            <a href="http://github.com/ngbp/ngbp/fork_select">Fork this</a>
-            to kickstart your next project.
+            (c) 2014 <a href="#">Matthew Crouse</a>.
             <br />
-            ngbp is based on
+            SelfieBingo is based on
             <a href="http://www.angularjs.org">AngularJS</a>,
             <a href="http://getbootstrap.com">Bootstrap</a>,
-            <a href="http://angular-ui.github.com/bootstrap">UI Bootstrap</a>,
+            <a href="http://dimsemenov.com/plugins/magnific-popup/">Magnific Popup</a>,
+            <a href="http://angular-ui.github.com/bootstrap">UI Bootstrap</a>
+            <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a>,
             and
-            <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a>.
+            <a href="http://phonegap.com/">PhoneGap</a>.
           </p>
         </div>
       </div>
     </footer>
   </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="../vendor/magnific-popup/dist/jquery.magnific-popup.js"></script> 
+  <script>
+$(document).ready(function() {
+// Inline popups
+$('#inline-popups').magnificPopup({
+  delegate: 'a',
+  removalDelay: 500, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+
+// Image popups
+$('#image-popups').magnificPopup({
+  delegate: 'a',
+  type: 'image',
+  removalDelay: 1000, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeOpen: function() {
+      // just a hack that adds mfp-anim class to markup 
+       this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+       this.st.mainClass = this.st.el.attr('data-effect');
+    }
+  },
+  closeOnContentClick: true,
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});
+
+
+// Hinge effect popup
+$('a.hinge').magnificPopup({
+  mainClass: 'mfp-with-fade',
+  removalDelay: 1000, //delay removal by X to allow out-animation
+  callbacks: {
+    beforeClose: function() {
+        this.content.addClass('hinge');
+    }, 
+    close: function() {
+        this.content.removeClass('hinge'); 
+    }
+  },
+  midClick: true
+});
+});
+
+</script>
+
 </html>

@@ -1,29 +1,21 @@
 <h1>TITLE</h1>
 <div class="center">
-    <div ng-controller="TableController">
-        <div ng-repeat="cell in cells">
-            <div class="parent-container">
-                <a href="assets/camera.gif">
+    <div id="image-popups" ng-controller="TableController">
+        <div  ng-repeat="cell in cells">
+            <a class='test-popup-link' data-effect="mfp-zoom-out" href="">
+                <div class="parent-container">
                     <div class="square">
                         <div class="content">
                             <div class="table">
                                 <div class="table-cell">
-                                    {{cell}}
+                                    <img src="assets/camera.png" />
+                                     {{cell}}
                                 </div>
                             </div>
                         </div>
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
     </div>
 </div>
-
-<script>
-    $('.parent-container').magnificPopup({
-  delegate: 'a', // child items selector, by clicking on it popup will open
-  type: 'image'
-  // other options
-});
-            console.log("popup");
-</script>

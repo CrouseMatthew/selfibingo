@@ -22,12 +22,10 @@ angular.module( 'ngBoilerplate.about', [
  $scope.cells = contents();
 
   function contents(){
-    console.log("BING");
     var num = [];
     for (var i = 1; i < 26 ; i++) {
     num.push(i);
     }
-    console.log(num );
     return num;
   }
 
