@@ -1,15 +1,36 @@
 <h1>TITLE</h1>
 <div class="center">
+    <div id="inline-popups" ng-controller="TableController">
+        <div  ng-repeat="cell in cells">
+            <a a href="#sq-{{$index}}" data-effect="mfp-zoom-out">
+                <div class="parent-container">
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    {{cell}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+                <div id="sq-{{$index}}" class="popup-message black-popup mfp-with-anim mfp-hide"> {{cell}}</div>
+        </div>
+    </div>
+</div>
+
+<!-- <h1>TITLE</h1>
+<div class="center">
     <div id="image-popups" ng-controller="TableController">
         <div  ng-repeat="cell in cells">
-            <a class='test-popup-link' data-effect="mfp-zoom-out" href="">
+            <a class='test-popup-link' data-effect="mfp-zoom-out" href="assets/camera.png">
                 <div class="parent-container">
                     <div class="square">
                         <div class="content">
                             <div class="table">
                                 <div class="table-cell">
                                     <img src="assets/camera.png" />
-                                     {{cell}}
                                 </div>
                             </div>
                         </div>
@@ -18,4 +39,27 @@
             </a>
         </div>
     </div>
-</div>
+</div> -->
+
+
+<!-- <h1>TITLE</h1>
+<div class="center">
+    <div id="inline-popups" ng-controller="TableController">
+        <div  ng-repeat="cell in cells">
+            <a id="#sq-{{cell}}" data-effect="mfp-zoom-out">
+                <div class="parent-container">
+                    <div class="square">
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    {{cell}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <div id="sq-{{cell}}" class="black-popup mfp-with-anim mfp-hide">{{cell}}</div>
+        </div>
+    </div>
+</div> -->
