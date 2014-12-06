@@ -24,6 +24,7 @@ angular.module("about/about.tpl.html", []).run(["$templateCache", function($temp
     "    </div>\n" +
     "</div>\n" +
     "\n" +
+    "\n" +
     "<!-- <h1>TITLE</h1>\n" +
     "<div class=\"center\">\n" +
     "    <div id=\"image-popups\" ng-controller=\"TableController\">\n" +
@@ -110,13 +111,13 @@ angular.module("home/home.tpl.html", []).run(["$templateCache", function($templa
     "  </ul>\n" +
     "\n" +
     "  <div class=\"btn-group\">\n" +
-    "    <a href=\"https://github.com/ngbp/ngbp#readme\" class=\"btn btn-large btn-default\">\n" +
+    "    <a href=\"#\" class=\"btn btn-large btn-default\">\n" +
     "      <i class=\"fa fa-book\"></i>\n" +
-    "      Read the Docs\n" +
+    "      Bus Schedule \n" +
     "    </a>\n" +
-    "    <a href=\"https://github.com/ngbp/ngbp\" class=\"btn btn-large btn-success\">\n" +
+    "    <a href=\"#\" class=\"btn btn-large btn-success\">\n" +
     "      <i class=\"fa fa-download\"></i>\n" +
-    "      Download\n" +
+    "      Upload Photos\n" +
     "    </a>\n" +
     "  </div>\n" +
     "\n" +
@@ -201,6 +202,7 @@ angular.module("home/home.tpl.html", []).run(["$templateCache", function($templa
     "    </div>\n" +
     "  </div>\n" +
     "</div>\n" +
+    "\n" +
     "\n" +
     "");
 }]);
