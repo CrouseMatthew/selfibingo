@@ -19,7 +19,19 @@ angular.module("about/about.tpl.html", []).run(["$templateCache", function($temp
     "                    </div>\n" +
     "                </div>\n" +
     "            </a>\n" +
-    "                <div id=\"sq-{{$index}}\" class=\"popup-message black-popup mfp-with-anim mfp-hide\"> {{cell}}</div>\n" +
+    "                <div id=\"sq-{{$index}}\" class=\"popup-message black-popup mfp-with-anim mfp-hide\">\n" +
+    "                {{cell}}\n" +
+    "                    <span class=\"align-right\">\n" +
+    "                        <a>\n" +
+    "                    <span class=\"fa-stack fa-lg\">\n" +
+    "                      <i class=\"fa fa-circle fa-2x fa-stack-4x circ-border\"></i>\n" +
+    "                      <i class=\"fa fa-circle fa-stack-2x\"></i>\n" +
+    "                      <i class=\"fa fa-camera fa-stack-1x fa-inverse\"></i>\n" +
+    "                    </span>\n" +
+    "                    </a>\n" +
+    "                    </span>\n" +
+    "\n" +
+    "                </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
@@ -67,7 +79,8 @@ angular.module("about/about.tpl.html", []).run(["$templateCache", function($temp
     "            <div id=\"sq-{{cell}}\" class=\"black-popup mfp-with-anim mfp-hide\">{{cell}}</div>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "</div> -->");
+    "</div> -->\n" +
+    "");
 }]);
 
 angular.module("home/home.tpl.html", []).run(["$templateCache", function($templateCache) {

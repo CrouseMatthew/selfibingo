@@ -54,6 +54,16 @@ body{
 .jumbotron{
     color:black;
 }
+span.align-right {
+position: fixed;
+bottom: -6em;
+right: 0em;
+}
+i.fa.fa-circle.fa-stack-2x{
+  color: black;
+  font-size: 1.9em;
+line-height: 1.06em;
+}
 
 
 
