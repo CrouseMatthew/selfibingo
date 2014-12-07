@@ -33,6 +33,7 @@
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
       { "parsetags": "explicit" }
     </script>
+    <script src="phonegap.js"></script>
 <script src="../vendor/angular-touch/angular-touch.js"></script>
 <script src="../vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="../vendor/angular-loading-bar/build/loading-bar.js"></script>
@@ -105,7 +106,7 @@
     </footer>
   </body>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="../vendor/magnific-popup/dist/jquery.magnific-popup.js"></script> 
+  <script src="../vendor/magnific-popup/dist/jquery.magnific-popup.js"></script>
   <script>
 $(document).ready(function() {
 // Inline popups
@@ -128,7 +129,7 @@ $('#image-popups').magnificPopup({
   removalDelay: 1000, //delay removal by X to allow out-animation
   callbacks: {
     beforeOpen: function() {
-      // just a hack that adds mfp-anim class to markup 
+      // just a hack that adds mfp-anim class to markup
        this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
        this.st.mainClass = this.st.el.attr('data-effect');
     }
@@ -145,9 +146,9 @@ $('a.hinge').magnificPopup({
   callbacks: {
     beforeClose: function() {
         this.content.addClass('hinge');
-    }, 
+    },
     close: function() {
-        this.content.removeClass('hinge'); 
+        this.content.removeClass('hinge');
     }
   },
   midClick: true
